@@ -15,7 +15,7 @@
     </ContentPage.ToolbarItems>
 
     <Grid>
-        <listview:SfListView ItemsSource="{Binding Books}" SelectionMode="None">
+        <listview:SfListView ItemsSource="{Binding Books}" SelectionMode="None" AutoFitMode="DynamicHeight">
             <listview:SfListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
