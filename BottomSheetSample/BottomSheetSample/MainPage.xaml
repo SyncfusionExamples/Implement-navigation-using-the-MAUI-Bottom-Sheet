@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:bottomSheet="clr-namespace:Syncfusion.Maui.Toolkit.BottomSheet;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:listview="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:local="clr-namespace:BottomSheetSample"
              x:Class="BottomSheetSample.MainPage">
 
@@ -14,8 +15,8 @@
     </ContentPage.ToolbarItems>
 
     <Grid>
-        <ListView ItemsSource="{Binding Books}" HasUnevenRows="True">
-            <ListView.ItemTemplate>
+        <listview:SfListView ItemsSource="{Binding Books}" SelectionMode="None">
+            <listview:SfListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <VerticalStackLayout Padding="10">
@@ -29,8 +30,8 @@
                         </VerticalStackLayout>
                     </ViewCell>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </listview:SfListView.ItemTemplate>
+        </listview:SfListView>
 
         <bottomSheet:SfBottomSheet x:Name="bottomSheet">
             <bottomSheet:SfBottomSheet.BottomSheetContent>

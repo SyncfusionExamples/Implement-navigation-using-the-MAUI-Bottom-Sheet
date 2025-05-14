@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:listview="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              x:Class="BottomSheet.FavoritesPage"
              Title="Favorites Page">
-    <CollectionView ItemsSource="{Binding FavoriteBooks}">
-        <CollectionView.ItemTemplate>
+    <listview:SfListView ItemsSource="{Binding FavoriteBooks}" SelectionMode="None">
+        <listview:SfListView.ItemTemplate>
             <DataTemplate>
-                <Border Margin="10" Padding="10">
+                <Border>
                     <VerticalStackLayout>
                         <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="20"/>
                         <Label Text="{Binding Description}" FontSize="14" TextColor="Gray"/>
                     </VerticalStackLayout>
                 </Border>
             </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+        </listview:SfListView.ItemTemplate>
+    </listview:SfListView>
 </ContentPage>
